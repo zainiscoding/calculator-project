@@ -1,0 +1,41 @@
+#calculator {
+    display: grid;
+    background-color: #d1d1d1;
+    width: 500px;
+    height: 500px;
+    grid-template-rows: 1fr 3fr;
+}
+
+#calcDisplay {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 50px;
+    background-color: #bdbdbd;
+}
+
+#calcDisplayContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 50px;
+    background-color: #bdbdbd;
+}
+
+#calcButtonContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: stretch;
+    width: 100%;
+    grid-row: 2;
+}
+
+.calcButtonNumber {
+}
+
+.calcButtonOperator {
+}
+
+.calcButtonEquals {
+}
