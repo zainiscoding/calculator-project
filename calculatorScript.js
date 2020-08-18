@@ -65,6 +65,12 @@ let inputNumTwo = [];
 
 //Makes the number and operator buttons display on the screen and add to the sum
 calcNumbers.forEach((calcNumber) => {
+    calcNumber.addEventListener("mouseenter", function (e) {
+        e.target.setAttribute("class", "hoveredNumber");
+    });
+    calcNumber.addEventListener("mouseleave", function (e) {
+        e.target.setAttribute("class", "calcButtonNumber");
+    });
     calcNumber.addEventListener("click", (e) => {
         let numberDiv = document.createElement("div");
         numberDiv.append(calcNumber.value);
@@ -78,6 +84,12 @@ calcNumbers.forEach((calcNumber) => {
 });
 
 calcOperators.forEach((calcOperator) => {
+    calcOperator.addEventListener("mouseenter", function (e) {
+        e.target.setAttribute("class", "hoveredOperator");
+    });
+    calcOperator.addEventListener("mouseleave", function (e) {
+        e.target.setAttribute("class", "calcButtonOperator");
+    });
     calcOperator.addEventListener("click", (e) => {
         if (
             Array.from(calcDisplayContainer.textContent)[0] == "" ||
@@ -93,7 +105,20 @@ calcOperators.forEach((calcOperator) => {
     });
 });
 
+calcEqualsButton.addEventListener("mouseenter", function (e) {
+    e.target.setAttribute("class", "hoveredOperator");
+});
+calcEqualsButton.addEventListener("mouseleave", function (e) {
+    e.target.setAttribute("class", "calcButtonOperator");
+});
+
 //Clear button functionality
+calcButtonClear.addEventListener("mouseenter", function (e) {
+    e.target.setAttribute("class", "clearButtonHover");
+});
+calcButtonClear.addEventListener("mouseleave", function (e) {
+    e.target.setAttribute("class", "calcButtonClear");
+});
 calcButtonClear.addEventListener("click", (e) => {
     inputNumOne = [];
     inputNumTwo = [];
