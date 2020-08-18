@@ -285,7 +285,7 @@ let subtraction = calcSubButton.addEventListener("click", (e) => {
         return;
     }
     //addition equals functionality
-    else if (Array.from(calcDisplayContainer.textContent).includes("+")) {
+    if (Array.from(calcDisplayContainer.textContent).includes("+")) {
         if (inputNumTwo.length == 0 && rollingSum.length == 0) {
             let answerDiv = document.createElement("div");
             calcDisplay.appendChild(answerDiv);
@@ -741,35 +741,38 @@ let equals = calcEqualsButton.addEventListener("click", (e) => {
         }
     }
     //subtraction equals functionality
-    //subtraction functionality
-    else if (inputNumTwo.length == 0 && rollingSum.length == 0) {
-        let answerDiv = document.createElement("div");
-        calcDisplay.appendChild(answerDiv);
-        inputNumTwo.push(parseInt(0));
-    } else if (rollingSum.length > 0 && inputNumOne.length > 0) {
-        let numsToAddOne = parseInt([...inputNumOne].join(""));
-        rollingSum.push(operate(subtract, parseInt(rollingSum), numsToAddOne));
-        rollingSum.shift();
-        calcDisplay.remove();
-        createDisplay();
-        let rollingSumString = rollingSum.toString();
-        let answerDiv = document.createElement("div");
-        answerDiv.append(rollingSumString);
-        calcDisplay.appendChild(answerDiv);
-        inputNumOne = [];
-        inputNumTwo = [];
-    } else if (inputNumTwo.length > 0) {
-        let numsToAddOne = parseInt([...inputNumOne].join(""));
-        let numsToAddTwo = parseInt([...inputNumTwo].join(""));
-        rollingSum.push(operate(subtract, numsToAddOne, numsToAddTwo));
-        calcDisplay.remove();
-        createDisplay();
-        let rollingSumString = rollingSum.toString();
-        let answerDiv = document.createElement("div");
-        answerDiv.append(rollingSumString);
-        calcDisplay.appendChild(answerDiv);
-        inputNumOne = [];
-        inputNumTwo = [];
+    else if (Array.from(calcDisplayContainer.textContent).includes("-")) {
+        if (inputNumTwo.length == 0 && rollingSum.length == 0) {
+            let answerDiv = document.createElement("div");
+            calcDisplay.appendChild(answerDiv);
+            inputNumTwo.push(parseInt(0));
+        } else if (rollingSum.length > 0 && inputNumOne.length > 0) {
+            let numsToAddOne = parseInt([...inputNumOne].join(""));
+            rollingSum.push(
+                operate(subtract, parseInt(rollingSum), numsToAddOne)
+            );
+            rollingSum.shift();
+            calcDisplay.remove();
+            createDisplay();
+            let rollingSumString = rollingSum.toString();
+            let answerDiv = document.createElement("div");
+            answerDiv.append(rollingSumString);
+            calcDisplay.appendChild(answerDiv);
+            inputNumOne = [];
+            inputNumTwo = [];
+        } else if (inputNumTwo.length > 0) {
+            let numsToAddOne = parseInt([...inputNumOne].join(""));
+            let numsToAddTwo = parseInt([...inputNumTwo].join(""));
+            rollingSum.push(operate(subtract, numsToAddOne, numsToAddTwo));
+            calcDisplay.remove();
+            createDisplay();
+            let rollingSumString = rollingSum.toString();
+            let answerDiv = document.createElement("div");
+            answerDiv.append(rollingSumString);
+            calcDisplay.appendChild(answerDiv);
+            inputNumOne = [];
+            inputNumTwo = [];
+        }
     }
 
     //division equals functionality
