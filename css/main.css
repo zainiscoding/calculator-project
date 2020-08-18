@@ -68,7 +68,6 @@ body {
 }
 
 .calcButtonNumber {
-    box-sizing: border-box;
     text-decoration: none;
     font-size: 2vmax;
     color: #f1d56c;
@@ -82,7 +81,6 @@ body {
 }
 
 .hoveredNumber {
-    box-sizing: border-box;
     text-decoration: none;
     font-size: 2vmax;
     color: #f1d56c;
@@ -95,7 +93,6 @@ body {
     transition: all 0.07s ease;
 }
 .calcButtonOperator {
-    box-sizing: border-box;
     text-decoration: none;
     font-size: 2vmax;
     color: #6cf193;
@@ -109,7 +106,6 @@ body {
 }
 
 .hoveredOperator {
-    box-sizing: border-box;
     text-decoration: none;
     font-size: 2vmax;
     color: #6cf193;
@@ -123,7 +119,6 @@ body {
 }
 
 .calcButtonClear {
-    box-sizing: border-box;
     text-decoration: none;
     font-size: 2vmax;
     color: #f16ccb;
@@ -137,7 +132,6 @@ body {
 }
 
 .clearButtonHover {
-    box-sizing: border-box;
     text-decoration: none;
     font-size: 2vmax;
     color: #f16ccb;
@@ -150,7 +144,6 @@ body {
     transition: all 0.07s ease;
 }
 .calcButtonEquals {
-    box-sizing: border-box;
     text-decoration: none;
     font-size: 2vmax;
     color: #6cf193;
@@ -161,12 +154,6 @@ body {
     outline: none;
     font-family: "Orbitron", sans-serif;
     transition: all 0.07s ease;
-}
-
-.clicked {
-    transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
 }
 
 #viewSrcText {
