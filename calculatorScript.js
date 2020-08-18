@@ -560,7 +560,7 @@ let division = calcDivideButton.addEventListener("click", (e) => {
             createDisplay();
             let rollingSumString = rollingSum.toString();
             let answerDiv = document.createElement("div");
-            answerDiv.append(rollingSumString + "*");
+            answerDiv.append(rollingSumString + "÷");
             calcDisplay.appendChild(answerDiv);
             inputNumOne = [];
             inputNumTwo = [];
@@ -572,7 +572,7 @@ let division = calcDivideButton.addEventListener("click", (e) => {
             createDisplay();
             let rollingSumString = rollingSum.toString();
             let answerDiv = document.createElement("div");
-            answerDiv.append(rollingSumString + "*");
+            answerDiv.append(rollingSumString + "÷");
             calcDisplay.appendChild(answerDiv);
             inputNumOne = [];
             inputNumTwo = [];

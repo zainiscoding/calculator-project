@@ -5,55 +5,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="css/reset.css" rel="stylesheet" />
         <link href="css/main.css" rel="stylesheet" />
-        <title>Calculator</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+            rel="stylesheet"
+        />
+        <title>AstroCalc</title>
     </head>
 
     <body>
         <main>
-            <h1>Calculator</h1>
-            <div id="calculator">
-                <div id="calcDisplayContainer"></div>
-                <div id="calcButtonContainer">
-                    <button class="calcButtonNumber" value="7">7</button>
-                    <button class="calcButtonNumber" value="8">8</button>
-                    <button class="calcButtonNumber" value="9">9</button>
-                    <button id="calcButtonClear">C</button>
-                    <button class="calcButtonNumber" value="4">4</button>
-                    <button class="calcButtonNumber" value="5">5</button>
-                    <button class="calcButtonNumber" value="6">6</button>
-                    <button id="addButton" class="calcButtonOperator" value="+">
-                        +
-                    </button>
-                    <button class="calcButtonNumber" value="1">1</button>
-                    <button class="calcButtonNumber" value="2">2</button>
-                    <button class="calcButtonNumber" value="3">3</button>
-                    <button
-                        id="subtractButton"
-                        class="calcButtonOperator"
-                        value="-"
-                    >
-                        -
-                    </button>
-                    <button class="calcButtonNumber" value="0">0</button>
-                    <button
-                        id="multiplyButton"
-                        class="calcButtonOperator"
-                        value="*"
-                    >
-                        *
-                    </button>
-                    <button
-                        id="divideButton"
-                        class="calcButtonOperator"
-                        value="÷"
-                    >
-                        ÷
-                    </button>
-                    <button id="equalsButton" class="equalsButton">
-                        =
-                    </button>
+            <div id="titleDiv"><h1>AstroCalc</h1></div>
+            <div class="center">
+                <div id="calculator">
+                    <div id="calcDisplayContainer"></div>
+                    <div id="calcButtonContainer">
+                        <button class="calcButtonNumber" value="7">7</button>
+                        <button class="calcButtonNumber" value="8">8</button>
+                        <button class="calcButtonNumber" value="9">9</button>
+                        <button id="calcButtonClear" class="calcButtonClear">
+                            C
+                        </button>
+                        <button class="calcButtonNumber" value="4">4</button>
+                        <button class="calcButtonNumber" value="5">5</button>
+                        <button class="calcButtonNumber" value="6">6</button>
+                        <button
+                            id="addButton"
+                            class="calcButtonOperator"
+                            value="+"
+                        >
+                            +
+                        </button>
+                        <button class="calcButtonNumber" value="1">1</button>
+                        <button class="calcButtonNumber" value="2">2</button>
+                        <button class="calcButtonNumber" value="3">3</button>
+                        <button
+                            id="subtractButton"
+                            class="calcButtonOperator"
+                            value="-"
+                        >
+                            -
+                        </button>
+                        <button class="calcButtonNumber" value="0">0</button>
+                        <button
+                            id="multiplyButton"
+                            class="calcButtonOperator"
+                            value="*"
+                        >
+                            *
+                        </button>
+                        <button
+                            id="divideButton"
+                            class="calcButtonOperator"
+                            value="÷"
+                        >
+                            ÷
+                        </button>
+                        <button id="equalsButton" class="calcButtonEquals">
+                            =
+                        </button>
+                    </div>
                 </div>
             </div>
+            <h2 id="viewSrcText">View source code</h2>
         </main>
         <script type="text/javascript" src="calculatorScript.js"></script>
     </body>
