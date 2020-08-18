@@ -5,7 +5,9 @@ main {
     align-items: center;
     background-color: #29335a;
 }
-
+body {
+    margin: 0;
+}
 #titleDiv {
     display: flex;
     align-items: center;
